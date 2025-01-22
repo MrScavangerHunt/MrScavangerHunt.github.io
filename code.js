@@ -5,6 +5,7 @@ const correctCode = '1433';
 // Get all the buttons and the display element
 const keys = document.querySelectorAll('.key');
 const enteredCodeDisplay = document.getElementById('enteredCode');
+const keypad = document.querySelector('.keypad'); // Get the keypad container
 
 // Add event listeners to each key
 keys.forEach(key => {
@@ -14,7 +15,9 @@ keys.forEach(key => {
 
         // Check if the entered code matches the correct code
         if (enteredCode === correctCode) {
-            document.body.classList.add('background-changed');
+            document.body.classList.add('background-changed'); // Change the background
+            keypad.style.display = 'none'; // Hide the keypad
+            console.log('Correct code entered. Background should change!');
         } else if (enteredCode.length > correctCode.length) {
             // Reset if code is too long or incorrect
             enteredCode = '';
