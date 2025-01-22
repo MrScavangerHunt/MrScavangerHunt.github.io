@@ -1,0 +1,54 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+.key {
+    font-size: 20px;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.key:hover {
+    background-color: #45a049;
+}
+
+.input-display {
+    margin-top: 20px;
+}
+
+#enteredCode {
+    font-size: 18px;
+}
+
+body.background-changed {
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+}
